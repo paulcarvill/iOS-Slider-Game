@@ -17,13 +17,14 @@
 int _myTarget;
 int _round;
 int _myScore;
+int _currentValue;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     _round = 1;
     _myScore = 0;
-    
+    _currentValue = 50;
     [self newGame];
 }
 
@@ -32,10 +33,34 @@ int _myScore;
     // Dispose of any resources that can be recreated.
 }
 
+- (int)calculateScore {
+    // calculate score
+    int difference;
+    
+    difference = (_myTarget - _currentValue);
+    if (difference < 0) {
+        difference = difference * -1;
+    }
+    
+    _myScore += (100 - difference);
+    return difference;
+}
+
 - (void)showAlert {
+    int difference = [self calculateScore];
+    NSString *title;
+    
+    if (difference == 0) {
+        title = @"Amazing! Spot on!";
+    } else if (difference < 20) {
+        title = @"Not bad!";
+    } else {
+        title = @"Rubbish!";
+    }
+    
     UIAlertView *alertView = [[UIAlertView  alloc]
-                              initWithTitle:@"YO!"
-                              message:[NSString stringWithFormat:@"The target value is: %d\nYou moved the slider to: %ld", _myTarget, lroundf(self.slider.value)]
+                              initWithTitle:title
+                              message:[NSString stringWithFormat:@"The target value is: %d\nYou moved the slider to: %d", _myTarget, _currentValue]
                               delegate:self
                               cancelButtonTitle:@"cancel this shiz"
                               otherButtonTitles:nil
@@ -48,21 +73,22 @@ int _myScore;
     self.score.text = [NSString stringWithFormat:@"%d", _myScore];
     self.target.text = [NSString stringWithFormat:@"%d", _myTarget];
     self.rounds.text = [NSString stringWithFormat:@"%d", _round++];
-    self.slider.value = 50;
+    self.slider.value = _currentValue;
 }
 
 - (void)reset {
     _myScore = 0;
     _round = 1;
+    _currentValue = 50;
     [self newGame];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    // check if they have scored by matching value with target
-    if (lroundf(self.slider.value) == _myTarget) {
-        _myScore++;
-    }
     [self newGame];
+}
+
+- (void)sliderMoved:(UISlider *)slider {
+    _currentValue = lroundf(self.slider.value);
 }
 
 @end

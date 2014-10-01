@@ -19,5 +19,7 @@
 
 - (IBAction)reset;
 
+- (IBAction)sliderMoved:(UISlider *)slider;
+
 @end
 
