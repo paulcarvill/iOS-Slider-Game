@@ -14,6 +14,7 @@
 		DA3D939119DC29B600EC782A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3D939019DC29B600EC782A /* Images.xcassets */; };
 		DA3D939419DC29B600EC782A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3D939219DC29B600EC782A /* LaunchScreen.xib */; };
 		DA3D93A019DC29B600EC782A /* ApprenticeBullseyeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3D939F19DC29B600EC782A /* ApprenticeBullseyeTests.m */; };
+		DA3D93AB19DC68F100EC782A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3D93AA19DC68F100EC782A /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		DA3D939919DC29B600EC782A /* ApprenticeBullseyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprenticeBullseyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3D939E19DC29B600EC782A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA3D939F19DC29B600EC782A /* ApprenticeBullseyeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApprenticeBullseyeTests.m; sourceTree = "<group>"; };
+		DA3D93A919DC68F100EC782A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		DA3D93AA19DC68F100EC782A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				DA3D938A19DC29B600EC782A /* ViewController.h */,
 				DA3D938B19DC29B600EC782A /* ViewController.m */,
 				DA3D938D19DC29B600EC782A /* Main.storyboard */,
+				DA3D93A919DC68F100EC782A /* AboutViewController.h */,
+				DA3D93AA19DC68F100EC782A /* AboutViewController.m */,
 				DA3D939019DC29B600EC782A /* Images.xcassets */,
 				DA3D939219DC29B600EC782A /* LaunchScreen.xib */,
 				DA3D938319DC29B600EC782A /* Supporting Files */,
@@ -168,6 +173,7 @@
 				TargetAttributes = {
 					DA3D937F19DC29B600EC782A = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 5567X393C5;
 					};
 					DA3D939819DC29B600EC782A = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -221,6 +227,7 @@
 			files = (
 				DA3D938C19DC29B600EC782A /* ViewController.m in Sources */,
 				DA3D938919DC29B600EC782A /* AppDelegate.m in Sources */,
+				DA3D93AB19DC68F100EC782A /* AboutViewController.m in Sources */,
 				DA3D938619DC29B600EC782A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

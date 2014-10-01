@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIAlertViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UISlider *slider;
+@property (nonatomic, weak) IBOutlet UILabel *target;
+@property (nonatomic, weak) IBOutlet UILabel *score;
+@property (nonatomic, weak) IBOutlet UILabel *rounds;
+
+- (IBAction)showAlert;
+
+- (IBAction)reset;
 
 @end
 
