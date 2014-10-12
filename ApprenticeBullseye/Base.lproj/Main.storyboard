@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -178,18 +179,29 @@
                                     <action selector="close" destination="ZK9-LK-Ubq" eventType="touchUpInside" id="wQM-H6-jzE"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4x6-d7-6Jd">
+                                <rect key="frame" x="36" y="40" width="496" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7HV-LL-PG4" firstAttribute="top" secondItem="GDb-Qt-PcG" secondAttribute="bottom" id="1dx-p9-xER"/>
                             <constraint firstItem="GDb-Qt-PcG" firstAttribute="top" secondItem="DjB-ag-qlM" secondAttribute="top" id="3Hb-Vr-VGr"/>
+                            <constraint firstItem="PT2-Vz-GZ3" firstAttribute="top" secondItem="4x6-d7-6Jd" secondAttribute="bottom" constant="8" id="6pV-cJ-B36"/>
                             <constraint firstAttribute="trailing" secondItem="GDb-Qt-PcG" secondAttribute="trailing" id="GIy-r0-48d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4x6-d7-6Jd" secondAttribute="trailing" constant="20" id="IzI-Wn-g3I"/>
                             <constraint firstItem="7HV-LL-PG4" firstAttribute="top" secondItem="PT2-Vz-GZ3" secondAttribute="bottom" constant="20" id="YWP-UO-ysM"/>
                             <constraint firstItem="GDb-Qt-PcG" firstAttribute="leading" secondItem="DjB-ag-qlM" secondAttribute="leading" id="Yb7-ii-7Re"/>
+                            <constraint firstItem="4x6-d7-6Jd" firstAttribute="leading" secondItem="DjB-ag-qlM" secondAttribute="leadingMargin" constant="20" id="nWe-PY-twR"/>
+                            <constraint firstItem="4x6-d7-6Jd" firstAttribute="top" secondItem="yC0-wH-ycS" secondAttribute="bottom" constant="20" id="x3b-Kk-4kF"/>
                             <constraint firstAttribute="centerX" secondItem="PT2-Vz-GZ3" secondAttribute="centerX" id="zno-5b-QIA"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="webView" destination="4x6-d7-6Jd" id="zay-3G-3Ci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PI8-Rl-7KD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
